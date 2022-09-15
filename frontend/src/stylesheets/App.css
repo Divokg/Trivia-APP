@@ -1,0 +1,48 @@
+.App-header {
+  background-color: rgb(37, 2, 87);
+  margin: 10px;
+  box-shadow: 5px 10px 12px #838383;
+  border-radius: 25px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  padding: 20px;
+  padding-right: 40%;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.App-header > h1 {
+  color: rgb(170, 212, 255);
+}
+
+.App-intro {
+  font-size: large;
+}
+
+h2 {
+  text-align: center;
+}
+
+li {
+  text-align: center;
+  margin: 5px 0px;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  background-color: rgb(182, 250, 255);
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 5px 10px 12px #cfcfcf;
+  border: 3px rgb(0, 0, 0) solid;
+}
