@@ -1,4 +1,4 @@
-## Udacitrivia 
+## TRIVIA APP
 
 This is a project that shows both my API and API documentation skills to build a trivia API.
 
