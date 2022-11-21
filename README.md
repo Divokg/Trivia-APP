@@ -76,7 +76,7 @@ The API will return four error types when requests fail:
  Returns a list of category objects, a list of question objects, success value and total number of questions.
  Results are paginated in groups of 10. Also include a request argument to choose page number, starting from 1.
  Sample: curl http://127.0.0.1:5000/questions
-
+'''json
  {
 "categories": {
 "1": "Science",
@@ -161,7 +161,7 @@ The API will return four error types when requests fail:
 "success": true,
 "total_questions": 31
 }
-
+'''
 
 # POST /questions
 --General:
