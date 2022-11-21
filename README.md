@@ -53,13 +53,13 @@ The backend app is hosted at http://127.0.0.1:5000/, this is set as a proxy in t
 # Error Handling
 
 Errors are returned as JSON objects in the following format:
-
+```json
 {
     "success": False,
     "error": 404,
     "message": "resource not found"   
 }
-
+```
 The API will return four error types when requests fail:
  404: Resource Not Found
  400: Bad Request
@@ -168,7 +168,7 @@ The API will return four error types when requests fail:
 Creates a new question using the submitted question, answer, difficulty and category. 
 
 Sample: curl http://127.0.0.1:5000/add_question -X POST -H "Content-Type: application/json" -d '{"question":"As black as ?", "answer":"coal", "category":"1", "difficulty":"2"}'
-
+```json
 {
   "created": 31,
   "question": {
@@ -180,14 +180,14 @@ Sample: curl http://127.0.0.1:5000/add_question -X POST -H "Content-Type: applic
   },
   "success": true
 }
-
+```
 # GET /categories
 
 General:
 Returns a list of category objects, success value and total number of categories.
 
 Sample: curl http://127.0.0.1:5000/categories
-
+```json
 {
   "categories": {
     "1": "Science",
@@ -200,14 +200,14 @@ Sample: curl http://127.0.0.1:5000/categories
   "success": true,
   "total_categories": 6
 }
-
+```
 # DELETE /questions/{id}
 
 General:
 Deletes the question of given {id}. Returns a success value and a list of remaining questions.
 
 Sample: curl -X DELETE http://127.0.0.1:5000/questions/12
-
+```json
 {
   "deleted": 12,
   "question deleted": {
@@ -219,14 +219,14 @@ Sample: curl -X DELETE http://127.0.0.1:5000/questions/12
   },
   "success": true
 }
-
+```
 # POST /search
 
 General:
 Search for question with the submitted search term. Returns a list of questions that have that search term, success value and total number of questions with that search term.
 
 Sample: curl http://127.0.0.1:5000/search_questions -X POST -H "Content-Type: application/json" -d '{"searchTerm":"which"}'
-
+```json
 {
   "questions": [
     {
@@ -272,14 +272,14 @@ Sample: curl http://127.0.0.1:5000/search_questions -X POST -H "Content-Type: ap
   "success": true,
   "total_questions": 7
 }
-
+```
 # GET /categories/{id}/questions
 
 General:
 Returns a list of questions in the given category per the input ID, success value and total questions of the given category.
 
 Sample: curl http://127.0.0.1:5000/categories/1/questions
-
+```json
 {
   "current_category": [
     {
@@ -348,13 +348,13 @@ Sample: curl http://127.0.0.1:5000/categories/1/questions
   "success": true,
   "total_questions": 8
 }
-
+```
 # POST /play
 
 General: Receives the categorytype and the previous question. Returns the next question in the same type category. 
 
 Sample: curl http://127.0.0.1:5000/play -X POST -H "Content-Type: application/json" -d '{"quiz_category":{"id":"1"}, "previous_questions":[42,26]}'
-
+```json
 {
   "question": {
     "answer": "The Liver",
@@ -365,6 +365,7 @@ Sample: curl http://127.0.0.1:5000/play -X POST -H "Content-Type: application/js
   },
   "success": true
 }
+```
 # Authors
 
 Samuel Ndungu Njoroge
